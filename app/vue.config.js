@@ -5,7 +5,7 @@ const WebpackAssetsManifest = require('webpack-assets-manifest');
 
 module.exports = {
 	lintOnSave: false,
-	publicPath: '/admin/',
+	publicPath: process.env.PUBLIC_PATH ? process.env.PUBLIC_PATH : '/admin',
 
 	devServer: {
 		allowedHosts: ['localhost', '.gitpod.io'],
